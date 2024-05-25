@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Random Character Capital</h1>
+        <input type="text" name="" id="" placeholder="Enter the text......">
+        <button type="button">Click</button><br>
+        <strong></strong>
+        </div>
+        <script>
+            var input = document.querySelector("input");
+            var btn   = document.querySelector("button");
+            var strong= document.querySelector("strong");
+            let front;
+
+            btn.addEventListener("click", () => {
+                var realinput = input.value;
+                var word      = realinput.split(" ");
+                for ( let i = 0; i < word.length; i++){
+                    front = word[i].charAt(0).toUpperCase() + word[i].slice(1, word[i].length);
+                    console.log(front);
+                    strong.innerText += " " + front;
+                    console.log(strong);
+                }
+            });
+        </script>
+    
+</body>
+</html>
